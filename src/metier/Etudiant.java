@@ -3,21 +3,20 @@ package metier;
 public class Etudiant {
 
 	
-	private String numEtudiant;
+	private int numEtudiant;
 	private String nomEtudiant;
 	private String prenomEtudiant;
 	private Ecole ecole;
 		
-	public Etudiant(String numE, String nomE, String prenomE) {
-		this.numEtudiant = numE;
+	public Etudiant(String nomE, String prenomE) {
 		this.nomEtudiant = nomE;
 		this.prenomEtudiant = prenomE;
 	}
 	
-	public String getNumEtudiant() {
+	public int getNumEtudiant() {
 		return numEtudiant;
 	}
-	public void setNumEtudiant(String numE) {
+	public void setNumEtudiant(int numE) {
 		this.numEtudiant = numE;
 	}
 	public String getNomEtudiant() {
@@ -51,6 +50,7 @@ public class Etudiant {
 		}
 		return true;
 	}
+	
 
 	@Override
 	public String toString() {
