@@ -1,0 +1,33 @@
+﻿
+GUIDE
+
+1- Installez ou ouvrez MYSQL puis exécuter ces requêtes.
+
+CREATE DATABASE etudiantecole
+
+DROP TABLE IF EXISTS `ecole`;
+
+CREATE TABLE `ecole` (
+  `idEcole` int(11) NOT NULL AUTO_INCREMENT,
+  `nomEcole` varchar(45) DEFAULT NULL,
+  `adresseEcole` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`idEcole`)
+)
+
+DROP TABLE IF EXISTS `etudiant`;
+
+CREATE TABLE `etudiant` (
+  `idEtudiant` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(45) DEFAULT NULL,
+  `prenom` varchar(45) DEFAULT NULL,
+  `idEcole` int(11) NOT NULL,
+  PRIMARY KEY (`idetudiant`),
+  KEY `idecole_idx` (`idecole`),
+  CONSTRAINT `idecole` FOREIGN KEY (`idEcole`) REFERENCES `ecole` (`idEcole`) ON DELETE NO ACTION ON UPDATE NO ACTION
+)
+
+2- Ouvrir le fichier lunch_etudiant_ecole.bat avec un éditeur de texte
+	* changer le chemin du jdk  cd "C:\Program Files\Java\jdk1.8.0_162\bin" 
+	* changer le dossier du jar "C:\Users\zeuhias\eclipse-workspace\EtudiantEcole-master\EtudiantEcole.jar"
+
+3- Lancer le fichier lunch_etudiant_ecole.bat
